@@ -2,7 +2,6 @@
 
 A simple, responsive frontend web app that displays a list of featured events. The event data is dynamically loaded from a local JSON file. The project also includes a basic **Login** and **Signup** page as an extra feature.
 
-
 ##  Technologies Used
 
 - **HTML5** – Structure of the pages  
@@ -29,7 +28,8 @@ arduino
 Copy
 Edit
 http://localhost:3000
-✅ Option 2 – Run with Live Server (in Visual Studio Code)
+
+ Option 2 – Run with Live Server (in Visual Studio Code)
 Open the project folder in VS Code
 
 Install the Live Server extension (if not already installed)
