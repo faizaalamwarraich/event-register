@@ -24,9 +24,6 @@ You can use **either of the following options**:
    cd path/to/event-page
 Open your browser and go to:
 
-arduino
-Copy
-Edit
 http://localhost:3000
 
 ## Option 2 – Run with Live Server (in Visual Studio Code)
