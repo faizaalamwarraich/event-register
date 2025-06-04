@@ -47,13 +47,3 @@ http://localhost:3000
 
 ###  Responsive Design
 - Layout adapts for **mobile**, **tablet**, and **desktop**
-
-###  Folder Structure
-event-page/
-├── index.html         # Main event listing page
-├── login.html         # Login page
-├── signup.html        # Signup page
-├── events.json        # Dummy event data
-├── script.js          # JavaScript for dynamic loading
-├── style.css          # Global styles
-└── assets/            # Images and other assets
