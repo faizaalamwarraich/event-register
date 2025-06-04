@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Discovery</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="assets/logo.png" id="site-logo" class="d-inline-block align-top" alt="Site Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#hero">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#featured-events">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#signup" class="btn btn-sm btn-signup">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1 id="hero-text"></h1>
+        </div>
+    </section>
+
+    <!-- Featured Events Section -->
+    <section id="featured-events" class="container mt-5 mb-5">
+        <h2 class="text-center mb-4">Featured Events</h2>
+        <div class="row mb-4">
+            <div class="col-md-6 offset-md-3">
+                <input type="text" id="search-bar" class="form-control" placeholder="Search events by name...">
+            </div>
+        </div>
+        <div class="row justify-content-center" id="event-cards-container">
+            <!-- Event cards will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="contact-heading mb-3">HAVE SOME QUESTIONS?</h2>
+                    <div class="contact-info mb-4">
+                        <p><span class="icon-placeholder">📍</span> 123 Event Street, Pakistan</p>
+                        <p><span class="icon-placeholder">📞</span> +92 9857484424</p>
+                        <p><span class="icon-placeholder">✉️</span> contact@dynamic360.com</p>
+                    </div>
+                    <div class="envelope-icon-container">
+                        <svg viewBox="0 0 100 70" fill="none" xmlns="http://www.w3.org/2000/svg" class="contact-envelope-svg">
+                            <path d="M5 15H95V60H5V15Z" stroke="url(#envelopeGradient)" stroke-width="2"/>
+                            <path d="M5 15L50 40L95 15" stroke="url(#envelopeGradient)" stroke-width="2"/>
+                            <rect x="15" y="5" width="70" height="10" fill="#f0f0f0" stroke="url(#envelopeGradient)" stroke-width="1"/>
+                            <line x1="20" y1="8" x2="80" y2="8" stroke="#ccc" stroke-width="1"/> 
+                            <line x1="20" y1="11" x2="70" y2="11" stroke="#ccc" stroke-width="1"/>
+                            <defs>
+                                <linearGradient id="envelopeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#8A2BE2;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#00BFFF;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form id="contactForm" class="contact-form-card p-4 p-md-5">
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="What's your email?" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <textarea class="form-control" id="questions" rows="4" placeholder="Your questions..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-contact-submit w-100">SEND MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4 bg-light">
+        <p>&copy; 2025 Dynamic 360. No rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Sign Up Modal -->
+    <div id="signUpModal" class="auth-modal">
+        <div class="auth-modal-content">
+            <span class="auth-close-btn" id="closeSignUpModal">&times;</span>
+            <h2>Create Account</h2>
+            <form id="signUpForm">
+                <div class="form-group">
+                    <label for="signUpFullName">Full Name</label>
+                    <input type="text" id="signUpFullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signUpEmail">Email</label>
+                    <input type="email" id="signUpEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signUpPassword">Password</label>
+                    <input type="password" id="signUpPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn-auth-submit">Sign Up</button>
+            </form>
+            <p class="auth-switch-link">Already have an account? <a href="#" id="switchToLogIn">Log In</a></p>
+        </div>
+    </div>
+
+    <!-- Log In Modal -->
+    <div id="logInModal" class="auth-modal">
+        <div class="auth-modal-content">
+            <span class="auth-close-btn" id="closeLogInModal">&times;</span>
+            <h2>Log In</h2>
+            <form id="logInForm">
+                <div class="form-group">
+                    <label for="logInEmail">Email</label>
+                    <input type="email" id="logInEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="logInPassword">Password</label>
+                    <input type="password" id="logInPassword" name="password" required>
+                </div>
+                <button type="submit" class="btn-auth-submit">Log In</button>
+            </form>
+            <p class="auth-switch-link">Don't have an account? <a href="#" id="switchToSignUp">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

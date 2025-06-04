@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "App Builders Bootcamp (Teens Edition)",
+        "date": "2025-07-20",
+        "time": "18:00",
+        "location": "The Code School, Bahria Town Phase 4, Rawalpindi",
+        "description": "A 5-day immersive tech camp where teens learn to design and build their own mobile apps from scratch. The course covers UI/UX principles, basic programming in Flutter, and app publishing essentials. Hands-on challenges and peer-to-peer sessions foster collaboration and innovation.Ideal for teens aged 13–17, with no prior coding experience required.",
+        "image": "assets/event1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Garden Art & Clay Day for Kids",
+        "date": "2025-08-15",
+        "time": "09:00",
+        "location": "Japanese Children’s Park, F-6, Islamabad",
+        "description": "Let your kids explore their creative side in this outdoor art session combining clay modeling with nature crafts. Children will make fun garden ornaments using leaves, pebbles, twigs, and air-dry clay. The event includes storytelling, music, and a healthy snack break in a safe, shaded area. Suitable for kids aged 6–12. All materials are non-toxic and included.",
+        "image": "assets/event2.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Little Scientists Day",
+        "date": "2025-07-28",
+        "time": "12:00",
+        "location": "Rawalpindi Science Center, Saidpur Road, Rawalpindi",
+        "description": "A fun-packed day where curious young minds explore the wonders of science through interactive exhibits and mini-experiments.Kids aged 5–12 will get to build simple machines, make slime, launch mini rockets, and more!.Parents are welcome to join or enjoy refreshments in the lounge while kids explore.Includes take-home science kits and certificates of participation.",
+        "image": "assets/event4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Clay & Create: Pottery Workshop",
+        "date": "2025-10-10",
+        "time": "08:00",
+        "location": "The Artisan’s Corner, F-6 Markaz, Islamabad",
+        "description": "Discover the joy of working with clay in this hands-on workshop designed for both beginners and art enthusiasts. Participants will learn basic hand-building techniques and create their own pottery piece to take home.All materials are provided, and guidance will be given by professional local ceramic artists.A perfect creative escape for a relaxing weekend!",
+        "image": "assets/event5.jpg"
+    },
+    {
+        "id": 3,
+        "name": "CodeStorm Hackathon 2025",
+        "date": "2025-09-05",
+        "time": "10:00",
+        "location": "National Incubation Center, Sector H-9, Islamabad",
+        "description": "Join the region’s most exciting hackathon where tech minds gather to build innovative solutions in just 48 hours. Whether you're a developer, designer, or idea machine, this event is your chance to network, learn, and create. Cash prizes, mentorship from top industry experts, and hands-on coding challenges await. Meals and workspace provided for all participants.",
+        "image": "assets/event3.jpg"
+    }
+]

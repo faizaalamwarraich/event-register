@@ -1,0 +1,556 @@
+/* Global Styles - Light Theme */
+body {
+    padding-top: 70px; /* For fixed navbar */
+    background-color: #f3e5f5; /* Very light purple background */
+    color: #333; /* Dark grey text */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Auth Modal Styles */
+.auth-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+
+
+.auth-modal-content {
+    background-color: white;
+    margin: 30px auto;
+    padding: 15px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.auth-modal-content {
+    background-color: white;
+    margin: 30px auto;
+    padding: 15px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #6A0DAD;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.auth-modal .form-group {
+    margin-bottom: 10px;
+}
+
+.auth-switch-link {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #555;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+}
+
+.auth-close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+a {
+    color: #007bff; /* Standard Bootstrap blue for links */
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Navigation Bar */
+.navbar-light {
+    background-color: #f3e5f5 !important; /* Light purple background for navbar */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Lighter shadow for lighter background */
+}
+
+#site-logo {
+    height: 40px; /* Reset logo size */
+    width: auto;
+    margin-right: 8px;
+}
+
+.navbar-brand {
+    color: #333 !important; /* Dark text for brand */
+    /* Remove background patch for logo, not needed in light theme */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #6A0DAD; /* Primary Purple for nav links */
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: #50077C; /* Darker Purple for hover/active state */
+}
+
+/* Sign Up Button in Navbar */
+.btn-signup {
+    background-color: #6A0DAD; /* Primary Purple */
+    border-color: #6A0DAD;
+    color: white;
+    font-weight: 500;
+    padding: 0.375rem 0.75rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn-signup:hover {
+    background-color: #50077C; /* Darker Purple */
+    border-color: #50077C;
+    color: white;
+}
+
+.navbar-toggler {
+    border-color: #ccc;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('assets/hero-image.jpg'); /* Updated path */
+    background-size: cover;
+    background-position: center center;
+    min-height: 75vh; /* Increased hero section height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 80px 15px;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Lighter overlay for potentially lighter images, or if text contrast is an issue */
+}
+
+#hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+#hero h1 {
+    color: #ffffff; /* White text for hero heading */
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    overflow: hidden; /* Ensures the text is not visible until typed */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto;
+    letter-spacing: .1em;
+    /* Removed border-right for cursor */
+    animation: typing 5s steps(26, end) infinite; /* Loop with hold: 3.5s type, 1.5s hold */
+}
+
+/* Typing Effect */
+@keyframes typing {
+    0% { width: 0; }
+    70% { width: 100%; } /* 3.5s / 5s = 70%. Text fully revealed here. */
+    100% { width: 100%; } /* Hold full width until end of 5s cycle. */
+}
+
+
+/* Responsive adjustments for Hero Text */
+@media (max-width: 575.98px) { /* Extra small devices (portrait phones, less than 576px) */
+    #hero h1 {
+        font-size: 2.2rem; /* Smaller font size for hero text */
+        letter-spacing: .05em; /* Slightly reduced letter spacing */
+        white-space: normal; /* Allow text to wrap */
+        display: block; /* Allow h1 to take full available width for centering text block */
+        animation: none; /* Remove animation on small screens */
+        overflow: visible; /* Ensure static text is not hidden */
+        width: auto; /* Allow the block to size according to its content */
+    }
+}
+
+/* Section Titles */
+h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Featured Events Section */
+#featured-events h2 {
+    font-weight: bold;
+    color: #6A0DAD; /* Primary Purple */
+}
+
+/* Discover Events Section */
+#discover-events h2 {
+    font-weight: bold;
+    color: #333; /* Dark grey */
+}
+
+/* Search Bar Styling */
+#search-bar {
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 15px; /* More padding */
+    border: 1px solid #ced4da; /* Standard Bootstrap border color */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#search-bar::placeholder {
+    color: #6c757d; /* Bootstrap muted text color */
+    opacity: 1; /* Ensure placeholder is visible */
+}
+
+#search-bar:focus {
+    border-color: #6A0DAD; /* Primary Purple border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(106, 13, 173, 0.25); /* Purple shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Event Cards */
+.event-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.event-card .card-img-top.event-card-image {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Makes the image container square */
+    object-fit: cover; /* Ensures the image covers the square area without distortion */
+    border-bottom: 1px solid #eee;
+}
+
+.event-card .card-body {
+    padding: 1.25rem; /* Standard Bootstrap card padding */
+    text-align: center; /* Center button */
+}
+
+.event-card .card-title {
+    color: #6A0DAD; /* Primary Purple titles for cards */
+    margin-bottom: 0.75rem;
+}
+
+.event-card .card-text.event-date-location small {
+    font-size: 0.95rem; /* Increased font size for date/location */
+}
+
+.event-card .card-text strong {
+    color: #333; /* Darker text for labels like Date/Location */
+}
+
+.event-card h6.card-subtitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #444; /* Slightly darker for Description heading */
+}
+
+.event-card .card-text.event-description {
+    font-size: 0.85rem; /* Slightly smaller for description to fit more text */
+    color: #555;
+    margin-bottom: 1rem; /* Add some space before the button */
+}
+
+.event-card .btn-primary.btn-purple-theme {
+    background-color: #6A0DAD; /* Primary Purple */
+    border-color: #6A0DAD;
+    color: white;
+}
+
+.event-card .btn-primary.btn-purple-theme:hover {
+    background-color: #50077C; /* Darker Purple */
+    border-color: #50077C;
+    color: white;
+}
+
+.event-card .card-text small {
+    color: #777;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #ffffff;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #f8f9fa; /* Light greyish-blue background */
+}
+
+.contact-heading {
+    font-weight: bold;
+    color: #343a40; /* Dark grey heading */
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.contact-info .icon-placeholder {
+    margin-right: 8px;
+    color: #8c4eb5; /* Using primary blue for icons for now */
+}
+
+.envelope-icon-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-envelope-svg {
+    width: 60%;
+    max-width: 250px;
+    height: auto;
+}
+
+.contact-form-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-card .form-control {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    background-color: #fdfdfd;
+}
+
+.contact-form-card .form-control::placeholder {
+    color: #aaa;
+}
+
+.contact-form-card .form-control:focus {
+    border-color: #8A2BE2; /* Purple focus */
+    box-shadow: 0 0 0 0.2rem rgba(138, 43, 226, 0.25);
+}
+
+.btn-contact-submit {
+    background-image: linear-gradient(to right, #8A2BE2 0%, #6A0DAD 50%, #50077C 100%); /* Shades of Purple Gradient */
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s ease;
+}
+
+.btn-contact-submit:hover {
+    opacity: 0.85;
+    color: white;
+}
+
+/* Authentication Modals */
+.auth-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1050; /* Higher than navbar */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-modal.active {
+    display: flex; /* Use flex to center content */
+}
+
+.auth-modal-content {
+    background-color: #f3e5f5; /* Lightest purple, matching body */
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    text-align: center;
+}
+
+.auth-modal-content h2 {
+    color: #6A0DAD; /* Primary Purple */
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.auth-close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-close-btn:hover,
+.auth-close-btn:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+.auth-modal .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.auth-modal .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #50077C; /* Darker Purple */
+    font-weight: 600;
+}
+
+.auth-modal .form-group input[type="text"],
+.auth-modal .form-group input[type="email"],
+.auth-modal .form-group input[type="password"] {
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid #d1c4e9; /* Lighter purple border */
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 0.85rem;
+    height: 28px;
+}
+
+.auth-modal .form-group input[type="text"]:focus,
+.auth-modal .form-group input[type="email"]:focus,
+.auth-modal .form-group input[type="password"]:focus {
+    outline: none;
+    border-color: #6A0DAD; /* Primary Purple */
+    box-shadow: 0 0 0 0.2rem rgba(106, 13, 173, 0.25); /* Purple focus glow */
+}
+
+.btn-auth-submit {
+    background-image: linear-gradient(to right, #7e57c2, #6A0DAD, #50077C);
+    color: white;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    width: 100%;
+    transition: opacity 0.3s ease;
+    margin-top: 4px;
+    height: 28px;
+}
+
+.btn-auth-submit:hover {
+    opacity: 0.85;
+}
+
+.auth-switch-link {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.auth-switch-link a {
+    color: #6A0DAD; /* Primary Purple */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-switch-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #e9ecef; /* Light grey footer */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Responsive adjustments for navbar centering */
+.navbar-nav {
+    width: 100%; 
+    justify-content: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px; 
+    margin-right: 15px;
+}
+
+@media (max-width: 991.98px) { 
+    .navbar-collapse {
+        text-align: center;
+    }
+    .navbar-nav {
+        width: auto; 
+        align-items: center; 
+    }
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .navbar-nav .nav-link {
+        padding-left: 0.5rem; 
+        padding-right: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem; 
+    }
+    body {
+        padding-top: 60px; 
+    }
+}
