@@ -29,29 +29,26 @@ Copy
 Edit
 http://localhost:3000
 
- Option 2 – Run with Live Server (in Visual Studio Code)
-Open the project folder in VS Code
+## Option 2 – Run with Live Server (in Visual Studio Code)
 
-Install the Live Server extension (if not already installed)
+1. Open the project folder in **VS Code**.
+2. Install the **Live Server** extension (if not already installed).
+3. Right-click `index.html` and select **"Open with Live Server"**.
+4. The project will open in your browser automatically.
 
-Right-click index.html and select "Open with Live Server"
 
-The project will open in your browser automatically
+## Extra Features
 
-🌟 Extra Features
-Login & Signup Pages
-Basic UI for user authentication (no backend logic)
+###  Login & Signup Pages
+- Basic UI for user authentication *(no backend logic)*
 
-Dynamic Event Loading
-Events are loaded from events.json using fetch() in JavaScript
+### Dynamic Event Loading
+- Events are loaded from `events.json` using `fetch()` in JavaScript
 
-Responsive Design
-Layout adapts for mobile, tablet, and desktop
+###  Responsive Design
+- Layout adapts for **mobile**, **tablet**, and **desktop**
 
-📁 Folder Structure
-graphql
-Copy
-Edit
+###  Folder Structure
 event-page/
 ├── index.html         # Main event listing page
 ├── login.html         # Login page
