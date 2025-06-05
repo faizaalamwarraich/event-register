@@ -2,18 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const eventCardsContainer = document.getElementById('event-cards-container');
     let allEvents = [];
     const searchBar = document.getElementById('search-bar');
-
-    // Fetch event data from JSON file
     fetch('events.json')
         .then(response => response.json())
         .then(data => {
             allEvents = data;
             allEvents = data;
-            displayEvents(allEvents); // Display all events initially or based on search
+            displayEvents(allEvents); 
         })
         .catch(error => console.error('Error fetching events:', error));
-
-    // Event listener for the search bar
     if (searchBar) {
         searchBar.addEventListener('keyup', (e) => {
             const searchTerm = e.target.value.toLowerCase();
@@ -24,9 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Function to display events
     function displayEvents(events) {
-        eventCardsContainer.innerHTML = ''; // Clear existing cards
+        eventCardsContainer.innerHTML = '';
         if (events.length === 0) {
             eventCardsContainer.innerHTML = '<p class="col-12 text-center">No events found.</p>';
             return;
@@ -54,12 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth scrolling for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            if (targetId.length > 1) { // Ensure it's not just '#'
+            if (targetId.length > 1) {
                  const targetElement = document.querySelector(targetId);
                  if (targetElement) {
                     targetElement.scrollIntoView({
@@ -70,25 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Optional: Add a placeholder logo image if you don't have one
-    // This is just to prevent a broken image icon if 'placeholder-logo.png' doesn't exist.
-    // You should replace 'placeholder-logo.png' with your actual logo.
     const logoImg = document.querySelector('.navbar-brand img');
     if (logoImg) {
         logoImg.onerror = () => {
-            logoImg.style.display = 'none'; // Hide if image fails to load
+            logoImg.style.display = 'none'; 
             const brandText = logoImg.nextSibling;
             if (brandText && brandText.nodeType === Node.TEXT_NODE) {
-                // Potentially add a fallback text or icon here if needed
             }
         };
     }
 
-    // Contact Form Submission (Basic: logs to console and prevents default)
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent actual submission
+            e.preventDefault(); 
             const firstName = document.getElementById('firstName').value;
             const lastName = document.getElementById('lastName').value;
             const email = document.getElementById('email').value;
@@ -99,26 +88,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 email,
                 questions
             });
-            // Here you would typically send the data to a server
-            // For now, we can just clear the form or show a message
+        
             alert('Thank you for your message! We will get back to you soon.');
             contactForm.reset();
         });
     }
 
-    // Hero Text Typing Animation
     const heroTextElement = document.getElementById('hero-text');
     const textToType = "Discover Events Near You";
     if (heroTextElement) {
-        heroTextElement.textContent = textToType; // Set the text for CSS animation to reveal
-        // The CSS animation 'typing' now loops infinitely and has no visible cursor.
+        heroTextElement.textContent = textToType; 
     }
 
-    // --- Auth Modal Functionality ---
     const signUpModal = document.getElementById('signUpModal');
     const logInModal = document.getElementById('logInModal');
 
-    const openSignUpBtn = document.querySelector('.btn-signup'); // Using class selector
+    const openSignUpBtn = document.querySelector('.btn-signup'); 
 
     const closeSignUpModalBtn = document.getElementById('closeSignUpModal');
     const closeLogInModalBtn = document.getElementById('closeLogInModal');
@@ -139,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (openSignUpBtn) {
         openSignUpBtn.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent navigating to #signup
+            e.preventDefault(); 
             openModal(signUpModal);
         });
     }
@@ -156,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         switchToLogInLink.addEventListener('click', (e) => {
             e.preventDefault();
             closeModal(signUpModal);
-            openModal(logInModal, 'left'); // Slide in from left
+            openModal(logInModal, 'left');
         });
     }
 
@@ -164,11 +149,10 @@ document.addEventListener('DOMContentLoaded', () => {
         switchToSignUpLink.addEventListener('click', (e) => {
             e.preventDefault();
             closeModal(logInModal);
-            openModal(signUpModal, 'right'); // Slide in from right
+            openModal(signUpModal, 'right');
         });
     }
 
-    // Close modal if user clicks outside of the modal content
     window.addEventListener('click', (event) => {
         if (event.target === signUpModal) {
             closeModal(signUpModal);
@@ -178,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Handle Sign Up form submission
     if (signUpForm) {
         signUpForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -198,7 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Handle Log In form submission
     if (logInForm) {
         logInForm.addEventListener('submit', (e) => {
             e.preventDefault();
