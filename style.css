@@ -312,12 +312,15 @@ h2 {
 /* Contact Section */
 #contact {
     padding: 60px 0;
-    background-color: #ffffff;
+    background-color: #f3e5f5;
+    border: 1px solid #d1c4e9; /* Light purple border */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(209, 196, 233, 0.2); /* Subtle purple shadow */
 }
 
 /* Contact Section Styles */
 #contact {
-    background-color: #f8f9fa; /* Light greyish-blue background */
+    background-color: #f3e5f5;
 }
 
 .contact-heading {
@@ -509,8 +512,8 @@ h2 {
 
 /* Footer Styles */
 footer {
-    background-color: #e9ecef; /* Light grey footer */
-    padding: 20px 0;
+    background-color: #f3e5f5;
+    padding: 5px 0;
     text-align: center;
     font-size: 0.9rem;
     color: #6c757d;
